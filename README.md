@@ -1,11 +1,11 @@
 # virtual\_stock_forecasting
-##**虚拟股票预测**
+## **虚拟股票预测**
 
 比赛网址：[https://challenger.ai/competition/trendsense](https://challenger.ai/competition/trendsense)
 
 主要任务为通过挖掘虚拟股票大规模历史数据的内在规律，实现对虚拟股票未来趋势的预测。
 
-###数据说明:
+### 数据说明:
 
 **训练数据**，是一个以逗号分隔的文本文件(csv)，格式示例：
 
@@ -24,5 +24,8 @@
 |600002|0.253232|...|0.543121|5.0|
 
 
-##解决方案:
+## 解决方案:
 
+1. 利用clementine对数据集进行分析，观察feature，label，gruop，weight，era的分布
+2. 对训练数据，按照era列进行分组，然后按照train：val＝7:3的比例，设置随机seed，将训练数据划分为训练、验证两份数据。
+3. 利用sklearn的树模型进行训练预测（待整理）
