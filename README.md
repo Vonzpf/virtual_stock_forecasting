@@ -3,14 +3,13 @@
 
 比赛网址：[https://challenger.ai/competition/trendsense](https://challenger.ai/competition/trendsense)
 
-主要任务为通过挖掘虚拟股票大规模历史数据的内在规律，实现对虚拟股票未来趋势的预测。
 
 ## 解决方案:
 
 1. 利用clementine对数据集进行分析，观察feature，label，gruop，weight，era的分布.
 2. 对训练数据，按照era列进行分组，然后按照train：val＝7:3的比例，设置随机seed，将训练数据划分为训练、验证两份数据.
-3. 主要利用sklearn的RandomForestClassifier等树模型进行训练预测，测试时添加投票表决.
-4. 公榜成绩最高0.669（当前公榜最高0.63，私榜最高0.69）.
+3. 主要利用sklearn的RandomForestClassifier等树模型进行训练预测，利用投票表决进行集成学习.
+4. 公榜成绩最高0.669，最高周排名23（目前公榜最高0.63，私榜最高0.69）.
 
 
 ## 数据说明:
